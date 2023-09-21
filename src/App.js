@@ -4,6 +4,7 @@ import About from "./pages/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/404";
+import Footer from "./Components/Footer/index";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
+      <Footer />
     </Router>
   );
 }
