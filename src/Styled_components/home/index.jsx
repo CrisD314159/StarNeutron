@@ -77,6 +77,7 @@ export const ArticleContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+/*This element contains all the elements of the article**/
 export const ArticleElement = styled.div`
   width: 40%;
 
@@ -85,26 +86,32 @@ export const ArticleElement = styled.div`
   flex-direction: column;
   padding: 10px 15px;
   .link {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 100;
     color: #fff;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
   }
 `;
+
+/**Contains the head image of the element */
 export const ImageContainer = styled.div`
   width: 100%;
   height: 300px;
-  background-image: url("img/Main-background.png");
+  background-image: url("img/neutronStar.png");
   background-size: cover;
   background-repeat: no-repeat;
 `;
+
+/**Contains the header of the article */
 export const ArticleElementHeader = styled.h2`
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
   font-family: "Poppins", sans-serif;
 `;
-export const ArticleElementContent = styled.h2`
+
+/**Contains the text element of the article */
+export const ArticleElementContent = styled.p`
   font-size: 18px;
   color: #fff;
   font-family: "Poppins", sans-serif;

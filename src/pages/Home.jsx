@@ -36,6 +36,7 @@ const Home = () => {
         <ArticleHeader>Últimos artículos</ArticleHeader>
         <ArticleContainer>
           <ArticleElement>
+            <ImageContainer />
             <ArticleElementHeader>
               Qué es exactamente una estrella de neutrones?
             </ArticleElementHeader>
