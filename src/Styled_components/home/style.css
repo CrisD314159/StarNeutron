@@ -17,6 +17,14 @@
     right: 41%;
 
   }
+  @media screen and (max-width:860px) {
+    h1{
+      bottom: 20%;
+      right: 37%;
+
+    }
+    
+  }
   
   h1 span {
     font-size: 40px;

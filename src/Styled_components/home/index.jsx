@@ -80,10 +80,11 @@ export const ArticleContainer = styled.div`
 /*This element contains all the elements of the article**/
 export const ArticleElement = styled.div`
   width: 40%;
-
+  height: 60%;
   background-color: #262626;
   display: flex;
   flex-direction: column;
+  margin: 10px 40px;
   padding: 10px 15px;
   .link {
     font-size: 16px;
@@ -92,15 +93,14 @@ export const ArticleElement = styled.div`
     font-family: "Poppins", sans-serif;
     text-decoration: none;
   }
+  @media screen and (max-width: 860px) {
+    width: 60%;
+  }
 `;
 
 /**Contains the head image of the element */
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.img`
   width: 100%;
-  height: 300px;
-  background-image: url("img/neutronStar.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 `;
 
 /**Contains the header of the article */

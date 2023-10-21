@@ -20,6 +20,9 @@ const HeaderImage = styled.img`
 
 const HeaderContainerImage = styled.div`
   padding: 0 70px;
+  @media screen and (max-width: 720px) {
+    margin: 0 auto;
+  }
 `;
 
 const HeaderList = styled.ul`
@@ -35,6 +38,9 @@ const HeaderList = styled.ul`
   }
   .link:hover {
     text-shadow: 3px 3px 2px #fff;
+  }
+  @media screen and (max-width: 720px) {
+    display: none;
   }
 `;
 
