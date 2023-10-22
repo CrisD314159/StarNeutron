@@ -37,7 +37,7 @@ const HeaderList = styled.ul`
     transition: all 0.3s;
   }
   .link:hover {
-    text-shadow: 3px 3px 2px #fff;
+    text-shadow: 3px 3px 4px #0ecffa;
   }
   @media screen and (max-width: 720px) {
     display: none;
@@ -54,7 +54,7 @@ const Header = () => {
       <HeaderContainer>
         <HeaderContainerImage>
           <Link to="/" className="link">
-            <HeaderImage src="img/starneutron-logo.png" alt="StarNeutron" />
+            <HeaderImage src="/img/starneutron-logo.png" alt="StarNeutron" />
           </Link>
         </HeaderContainerImage>
         <nav>

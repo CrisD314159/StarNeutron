@@ -1,6 +1,11 @@
-const NotFound = (params) => {
-    return <div>Not found</div>
-    
-}
+import { NotFoundContainer } from "../Styled_components/404";
 
-export default NotFound
+const NotFound = (params) => {
+  return (
+    <div>
+      <NotFoundContainer />
+    </div>
+  );
+};
+
+export default NotFound;

@@ -11,9 +11,10 @@ export const HomeBackgroundElement = styled.div`
   height: 100vh;
 
   height: 620px;
-  background-image: url("img/Main-background.png");
+  background-image: url("/img/Main-background.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 `;
 
 export const Title = styled.h2`

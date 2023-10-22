@@ -25,7 +25,7 @@ const HeaderList = styled.ul`
     transition: all 0.3s;
   }
   .link:hover {
-    text-shadow: 3px 3px 2px #fff;
+    text-shadow: 3px 3px 4px #0ecffa;
   }
 `;
 
@@ -43,7 +43,7 @@ const Footer = () => {
     <div>
       <FooterElementContainer>
         <FooterImgContainer>
-          <FooterImg src="img/starneutron-logo.png" alt="StarNeutron" />
+          <FooterImg src="/img/starneutron-logo.png" alt="StarNeutron" />
         </FooterImgContainer>
         <HeaderListContainer>
           <HeaderList>

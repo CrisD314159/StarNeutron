@@ -8,6 +8,9 @@ export const ArticleBackgroundContainer = styled.div`
   background-image: url("${(props) => props.background}");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
   height: 600px;
   display: flex;
   align-items: center;
@@ -20,6 +23,7 @@ export const ArticleBackgroundTitle = styled.p`
   font-weight: 200;
   font-size: 60px;
   text-align: center;
+  backdrop-filter: blur(40px);
 `;
 
 /*Article body components*/
@@ -29,6 +33,11 @@ export const ArticleContainer = styled.div`
   background-color: #1f1f1f;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 720px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ArticleBodyContainer = styled.div`
@@ -36,7 +45,9 @@ export const ArticleBodyContainer = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
+
   .link {
+    transition: all 0.5s;
     font-family: "Poppins", sans-serif;
     color: #fff;
     text-decoration: none;
@@ -44,6 +55,12 @@ export const ArticleBodyContainer = styled.div`
     margin: 20px 10px;
     font-weight: 200;
     font-size: 16px;
+  }
+  .link:hover {
+    text-shadow: 3px 3px 2px #0ecffa;
+  }
+  @media screen and (max-width: 720px) {
+    width: 100%;
   }
 `;
 
