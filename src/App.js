@@ -7,6 +7,7 @@ import NotFound from "./pages/404";
 import Footer from "./Components/Footer/index";
 import Article from "./pages/Article";
 
+/*Application method*/
 function App() {
   return (
     <Router>

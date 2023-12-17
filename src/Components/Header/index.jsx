@@ -48,6 +48,7 @@ const HeaderElement = styled.li`
   padding: 0 25px;
 `;
 
+/*Header structure component*/
 const Header = () => {
   return (
     <HeaderParent>
@@ -70,8 +71,8 @@ const Header = () => {
               </Link>
             </HeaderElement>
             <HeaderElement>
-              <Link to="/contact" className="link">
-                Contacto
+              <Link to="https://crisdev.web.app/" className="link">
+                Creator's Page
               </Link>
             </HeaderElement>
           </HeaderList>

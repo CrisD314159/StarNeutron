@@ -24,6 +24,9 @@ export const ArticleBackgroundTitle = styled.p`
   font-size: 60px;
   text-align: center;
   backdrop-filter: blur(40px);
+  @media screen and (max-width: 500px) {
+    font-size: 50px;
+  }
 `;
 
 /*Article body components*/
@@ -37,6 +40,9 @@ export const ArticleContainer = styled.div`
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 60px 10px;
   }
 `;
 
@@ -75,6 +81,9 @@ export const ArticleBodyTitle = styled.p`
   font-weight: 200;
   font-size: 35px;
   color: #fff;
+  @media screen and (max-with: 500px) {
+    font-size: 30px;
+  }
 `;
 
 export const ArticleBodyText = styled.p`
@@ -83,7 +92,7 @@ export const ArticleBodyText = styled.p`
   font-size: 16px;
   color: #fff;
 `;
-
+/* Stepper styles components*/
 export const StepperContainer = styled.div`
   display: flex;
   flex-direction: column;

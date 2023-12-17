@@ -7,6 +7,7 @@ import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
+/*Stepper component for article view*/
 export default function VerticalLinearStepper({ goodies }) {
   const steps = goodies;
   const [activeStep, setActiveStep] = React.useState(0);

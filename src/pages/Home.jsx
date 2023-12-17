@@ -17,9 +17,11 @@ import { Link } from "react-router-dom";
 
 /* Home page Component*/
 const Home = () => {
+  /* This method puts the next page on top position*/
   const putPageOnTop = () => {
     window.scrollTo(0, 0);
   };
+
   return (
     <div>
       {/*Main background component*/}
@@ -54,7 +56,7 @@ const Home = () => {
                   {element.description}
                 </ArticleElementContent>
 
-                <Link to={`/Article/${element.token}`} onClick={putPageOnTop}>
+                <Link to={`/article/${element.token}`} onClick={putPageOnTop}>
                   <Button>Leer Artículo</Button>
                 </Link>
               </ArticleElement>

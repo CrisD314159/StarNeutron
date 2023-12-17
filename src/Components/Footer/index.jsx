@@ -31,13 +31,21 @@ const HeaderList = styled.ul`
 
 const HeaderElement = styled.li`
   padding: 0 25px;
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
 `;
 
 const HeaderListContainer = styled.ul`
   margin-left: 100px;
   border-left: 1px solid #ccc;
+  @media screen and (max-width: 500px) {
+    margin-left: 0;
+    border-left: none;
+  }
 `;
 
+/*Footer structure method*/
 const Footer = () => {
   return (
     <div>
