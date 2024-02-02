@@ -32,10 +32,10 @@ export default function VerticalLinearStepper({ goodies }) {
         sx={{ color: "#FFF" }}
       >
         {steps.map((step, index) => (
-          <Step key={step.label}>
+          <Step key={step.goodie_title}>
             <StepLabel sx={{ color: "white" }}>
               <Typography sx={{ color: "white", fontFamily: "Poppins" }}>
-                {step.label}
+                {step.goodie_title}
               </Typography>
             </StepLabel>
             <StepContent>
@@ -46,7 +46,7 @@ export default function VerticalLinearStepper({ goodies }) {
                   fontSize: "15px",
                 }}
               >
-                {step.description}
+                {step.goodie_content}
               </Typography>
               <Box sx={{ mb: 2 }}>
                 <div>

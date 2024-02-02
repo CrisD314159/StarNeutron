@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HomeBackgroundElement = styled.div`
   * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   display: flex;
   align-items: center;
@@ -15,6 +16,11 @@ export const HomeBackgroundElement = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  @media screen  and (max-width: 480px){
+    justify-content: flex-end;
+    
+  }
 `;
 
 export const Title = styled.h2`
@@ -26,6 +32,12 @@ export const Title = styled.h2`
   text-transform: uppercase;
   margin: 20px 60px;
   padding: 60px;
+
+  @media screen  and (max-width: 480px){
+    font-size: 2.1rem;
+    margin-left:0;
+    
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -52,6 +64,16 @@ export const TopicsContainer = styled.div`
   }
   .link:hover {
     text-shadow: 3px 3px 2px #fff;
+  }
+  @media screen and (max-width: 480px) {
+
+    width: 100%;
+    border: none;
+    margin: 10px auto;
+    .link{
+      font-size: 14px;
+    }
+
   }
 `;
 
@@ -80,8 +102,8 @@ export const ArticleContainer = styled.div`
 
 /*This element contains all the elements of the article**/
 export const ArticleElement = styled.div`
-  width: 40%;
-  height: 60%;
+  width: 500px;
+  height: 550px;
   background-color: #262626;
   display: flex;
   flex-direction: column;
@@ -97,9 +119,18 @@ export const ArticleElement = styled.div`
   @media screen and (max-width: 860px) {
     width: 60%;
   }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 `;
 
 /**Contains the head image of the element */
+export const ImgSize = styled.div`
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+`
 export const ImageContainer = styled.img`
   width: 100%;
 `;

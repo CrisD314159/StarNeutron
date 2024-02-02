@@ -9,19 +9,59 @@ import {
   ImageContainer,
   ArticleElementHeader,
   ArticleElementContent,
+  ImgSize,
 } from "../Styled_components/home";
 import SearchAppBar from "../Styled_components/home/search";
-import { articles } from "../articles";
+
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 
 /* Home page Component*/
 const Home = () => {
+
   /* This method puts the next page on top position*/
   const putPageOnTop = () => {
     window.scrollTo(0, 0);
   };
 
+  const handleSearch = (params) => {
+    setSearch(params)
+    setTopic("")
+    
+  }
+  const [articles, setArticles] = useState([])
+  const [topic, setTopic] = useState("")
+  const [search, setSearch] = useState("")
+  /* effect hook to ge all the recent articles */
+  /* effect hook to get all the recent articles */
+useEffect(() => {
+  const getArticles = async () => {
+    try {
+      if (topic) {
+        
+        const response = await fetch(`http://localhost:1234/articles?topic=${topic}`);
+        const data = await response.json();
+        setArticles(data);
+      } else if (search) {
+        const encodedSearch = encodeURIComponent(search); // Encode the search parameter
+        const response = await fetch(`http://localhost:1234/articles?search=${encodedSearch}`);
+        const data = await response.json();
+        setArticles(data);
+      } else {
+        const response = await fetch('http://localhost:1234/articles');
+        const data = await response.json();
+        setArticles(data);
+      }
+    } catch (error) {
+      throw new Error(error)
+    }
+  };
+
+  getArticles();
+}, [topic, search]);
+  
   return (
     <div>
       {/*Main background component*/}
@@ -39,7 +79,7 @@ const Home = () => {
 
       <section>
         {/*Search component*/}
-        <SearchAppBar />
+        <SearchAppBar  handleSearch={handleSearch} setTopic={setTopic}/>
       </section>
 
       {/*Article view is the container of everything related to articles*/}
@@ -50,13 +90,16 @@ const Home = () => {
           {articles.map((element, key) => {
             return (
               <ArticleElement key={key}>
-                <ImageContainer src={element.image} />
-                <ArticleElementHeader>{element.title}</ArticleElementHeader>
+                <ImgSize>
+               <ImageContainer src={element.article_image} />
+                </ImgSize>
+               
+                <ArticleElementHeader>{element.article_title}</ArticleElementHeader>
                 <ArticleElementContent>
-                  {element.description}
+                  {element.article_description}
                 </ArticleElementContent>
 
-                <Link to={`/article/${element.token}`} onClick={putPageOnTop}>
+                <Link to={`/articles/${element.id}`} onClick={putPageOnTop}>
                   <Button>Leer Artículo</Button>
                 </Link>
               </ArticleElement>

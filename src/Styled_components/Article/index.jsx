@@ -92,6 +92,14 @@ export const ArticleBodyText = styled.p`
   font-size: 16px;
   color: #fff;
 `;
+
+export const ArticleBodyReference = styled.li`
+list-style: circle;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: #fff;
+`;
 /* Stepper styles components*/
 export const StepperContainer = styled.div`
   display: flex;
@@ -115,4 +123,22 @@ export const ArticleBodyGenre = styled.p`
   font-weight: 200;
   font-size: 16px;
   color: #fff;
+`;
+
+
+
+export const ArticleBackgroundLoading = styled.div`
+  * {
+    box-sizing: border-box;
+  }
+  background-color: #212121;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

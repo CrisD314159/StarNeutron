@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import React from "react";
+import BasicMenu from "./BasicMenu";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -22,6 +23,7 @@ const HeaderContainerImage = styled.div`
   padding: 0 70px;
   @media screen and (max-width: 720px) {
     margin: 0 auto;
+    padding-right:95px ;
   }
 `;
 
@@ -48,11 +50,30 @@ const HeaderElement = styled.li`
   padding: 0 25px;
 `;
 
+const MenuResponsive = styled.div`
+  height: 100%;
+  width: 300px;
+  display: none;
+  @media screen and (max-width: 740px) {
+    display: flex;
+    align-items: center;
+  }
+  .menuLink{
+    color: #fff;
+  }
+  .MuiSvgIcon-root{
+    color: #fff;
+  }
+`
+
 /*Header structure component*/
 const Header = () => {
   return (
     <HeaderParent>
       <HeaderContainer>
+        <MenuResponsive>
+          <BasicMenu/>
+        </MenuResponsive>
         <HeaderContainerImage>
           <Link to="/" className="link">
             <HeaderImage src="/img/starneutron-logo.png" alt="StarNeutron" />
