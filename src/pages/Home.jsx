@@ -41,16 +41,16 @@ useEffect(() => {
     try {
       if (topic) {
         
-        const response = await fetch(`http://localhost:1234/articles?topic=${topic}`);
+        const response = await fetch(`https://star-api-production.up.railway.app/articles?topic=${topic}`);
         const data = await response.json();
         setArticles(data);
       } else if (search) {
         const encodedSearch = encodeURIComponent(search); // Encode the search parameter
-        const response = await fetch(`http://localhost:1234/articles?search=${encodedSearch}`);
+        const response = await fetch(`https://star-api-production.up.railway.app/articles?search=${encodedSearch}`);
         const data = await response.json();
         setArticles(data);
       } else {
-        const response = await fetch('http://localhost:1234/articles');
+        const response = await fetch('https://star-api-production.up.railway.app/articles');
         const data = await response.json();
         setArticles(data);
       }
@@ -91,7 +91,7 @@ useEffect(() => {
             return (
               <ArticleElement key={key}>
                 <ImgSize>
-               <ImageContainer src={element.article_image} />
+               <ImageContainer src={element.image_url} />
                 </ImgSize>
                
                 <ArticleElementHeader>{element.article_title}</ArticleElementHeader>

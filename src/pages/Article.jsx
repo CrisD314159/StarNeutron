@@ -27,7 +27,7 @@ const Article = () => {
   useEffect(() => {
     const getArticle = async () => {
       try {
-        const response = await fetch(`http://localhost:1234/articles/${id}`);
+        const response = await fetch(`https://star-api-production.up.railway.app/articles/${id}`);
         if(response.status === 404) setArticle(404)
           const data = await response.json();
           setArticle(data);
@@ -53,7 +53,7 @@ const Article = () => {
   return (
     <div>
       {/*This section contains the background of the title*/}
-      <ArticleBackgroundContainer background={article.article.article_image}>
+      <ArticleBackgroundContainer background={article.article.image_url}>
         <ArticleBackgroundTitle>{article.article.article_title}</ArticleBackgroundTitle>
       </ArticleBackgroundContainer>
       {/*This contanis all related to article*/}
