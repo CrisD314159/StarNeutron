@@ -81,7 +81,7 @@ const Article = () => {
               </ArticleBodyElement>
               <ArticleBodyElement>
                 <ArticleBodyTitle>Referencias</ArticleBodyTitle>
-                <ul>
+                <ul style={{padding:0}}>
                 {article.references.map((element)=>{
                   return(
                     

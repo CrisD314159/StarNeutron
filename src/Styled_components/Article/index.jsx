@@ -15,6 +15,10 @@ export const ArticleBackgroundContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 500px) {
+    background-attachment: local;
+    background-size: cover;
+  }
 `;
 
 export const ArticleBackgroundTitle = styled.p`
@@ -26,6 +30,7 @@ export const ArticleBackgroundTitle = styled.p`
   backdrop-filter: blur(40px);
   @media screen and (max-width: 500px) {
     font-size: 50px;
+    backdrop-filter: blur(40px);
   }
 `;
 
@@ -96,10 +101,10 @@ export const ArticleBodyText = styled.p`
 
 
 export const ArticleBodyReference = styled.li`
-list-style: circle;
+  list-style: circle;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
 `;
 /* Stepper styles components*/
