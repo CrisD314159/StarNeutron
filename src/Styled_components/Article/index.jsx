@@ -87,11 +87,13 @@ export const ArticleBodyTitle = styled.p`
 `;
 
 export const ArticleBodyText = styled.p`
+  white-space: pre-line;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-size: 16px;
   color: #fff;
 `;
+
 
 export const ArticleBodyReference = styled.li`
 list-style: circle;

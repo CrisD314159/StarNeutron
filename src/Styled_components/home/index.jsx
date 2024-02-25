@@ -146,6 +146,7 @@ export const ArticleElementHeader = styled.h2`
 /**Contains the text element of the article */
 export const ArticleElementContent = styled.p`
   font-size: 18px;
+  overflow: scroll;
   color: #fff;
   font-family: "Poppins", sans-serif;
 `;

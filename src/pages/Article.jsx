@@ -11,7 +11,7 @@ import {
   StepperTitle,
   ArticleBodyGenre,
   ArticleBackgroundLoading,
-  ArticleBodyReference,
+  ArticleBodyReference
 } from "../Styled_components/Article";
 import VerticalLinearStepper from "../Styled_components/Article/stepper";
 import { useEffect, useState } from "react";
@@ -45,7 +45,7 @@ const Article = () => {
   if (!article) {
     
     return <ArticleBackgroundLoading>
-      <ArticleBackgroundTitle>Cargando...</ArticleBackgroundTitle>
+      <ArticleBackgroundTitle/>
     </ArticleBackgroundLoading>;
     
   }
@@ -72,7 +72,7 @@ const Article = () => {
 
               <ArticleBodyElement>
                 <ArticleBodyTitle>{article.article.body_title}</ArticleBodyTitle>
-                <ArticleBodyText>{article.article.body_content}</ArticleBodyText>
+                <ArticleBodyText disabled>{article.article.body_content}</ArticleBodyText>
               </ArticleBodyElement>
 
            <ArticleBodyElement>
