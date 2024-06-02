@@ -8,11 +8,23 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
 `;
 
 const HeaderParent = styled.header`
   background-color: #212121;
   height: 91px;
+  @media screen and (max-width: 720px) {
+    height: 130px;
+    nav{
+      width: 100%;
+    }
+  }
 `;
 
 const HeaderImage = styled.img`
@@ -23,7 +35,6 @@ const HeaderContainerImage = styled.div`
   padding: 0 70px;
   @media screen and (max-width: 720px) {
     margin: 0 auto;
-    padding-right:95px ;
   }
 `;
 
@@ -41,39 +52,27 @@ const HeaderList = styled.ul`
   .link:hover {
     text-shadow: 3px 3px 4px #0ecffa;
   }
-  @media screen and (max-width: 720px) {
-    display: none;
-  }
+  
 `;
 
 const HeaderElement = styled.li`
+  
   padding: 0 25px;
+  @media screen and (max-width: 720px) {
+    .link{font-size: 12px;}
+    padding: 0 10px;
+    width: 100%;
+    
+  }
 `;
 
-const MenuResponsive = styled.div`
-  height: 100%;
-  width: 300px;
-  display: none;
-  @media screen and (max-width: 740px) {
-    display: flex;
-    align-items: center;
-  }
-  .menuLink{
-    color: #fff;
-  }
-  .MuiSvgIcon-root{
-    color: #fff;
-  }
-`
+
 
 /*Header structure component*/
 const Header = () => {
   return (
     <HeaderParent>
       <HeaderContainer>
-        <MenuResponsive>
-          <BasicMenu/>
-        </MenuResponsive>
         <HeaderContainerImage>
           <Link to="/" className="link">
             <HeaderImage src="/img/starneutron-logo.png" alt="StarNeutron" />
