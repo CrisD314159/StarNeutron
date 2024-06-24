@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import React from "react";
-import BasicMenu from "./BasicMenu";
+
 
 const HeaderContainer = styled.div`
   display: flex;
