@@ -27,7 +27,7 @@ const Article = () => {
   useEffect(() => {
     const getArticle = async () => {
       try {
-        const response = await fetch(`https://star-api-production.up.railway.app/articles/${id}`);
+        const response = await fetch(`https://willing-orly-cris-star-241e9fc8.koyeb.app/articles/${id}`);
         if(response.status === 404) setArticle(404)
           const data = await response.json();
           setArticle(data);

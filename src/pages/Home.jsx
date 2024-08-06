@@ -41,16 +41,16 @@ useEffect(() => {
     try {
       if (topic) {
         
-        const response = await fetch(`https://star-api-production.up.railway.app/articles?topic=${topic}`);
+        const response = await fetch(`https://willing-orly-cris-star-241e9fc8.koyeb.app/articles?topic=${topic}`);
         const data = await response.json();
         setArticles(data);
       } else if (search) {
         const encodedSearch = encodeURIComponent(search); // Encode the search parameter
-        const response = await fetch(`https://star-api-production.up.railway.app/articles?search=${encodedSearch}`);
+        const response = await fetch(`https://willing-orly-cris-star-241e9fc8.koyeb.app/articles?search=${encodedSearch}`);
         const data = await response.json();
         setArticles(data);
       } else {
-        const response = await fetch('https://star-api-production.up.railway.app/articles');
+        const response = await fetch('https://willing-orly-cris-star-241e9fc8.koyeb.app/articles');
         const data = await response.json();
         setArticles(data);
       }
